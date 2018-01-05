@@ -35,7 +35,7 @@
 |column|type|options|
 |------|----|-------|
 |nickname|string|null:false|
-|message|taxt|
+|message|text|
 
 ## Association
 - has_many :users ,through: :group_users
