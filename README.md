@@ -6,8 +6,8 @@
 |group_id|integer|null:false|
 
 ## Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 
 
@@ -24,7 +24,7 @@
 
 ## Association
 - belongs_to :group
-- belongs_to :users
+- belongs_to :user
 
 
 
@@ -34,8 +34,7 @@
 
 |column|type|options|
 |------|----|-------|
-|nickname|string|null:false|
-|message|text|
+|username|string|null:false|
 
 ## Association
 - has_many :users ,through: :group_users
@@ -50,7 +49,6 @@
 |column|type|options|
 |------|----|-------|
 |nickname|text|null :false|
-|id|integer|null :false|
 
 ## Association
 - has_many :group_users
