@@ -34,7 +34,7 @@
 
 |column|type|options|
 |------|----|-------|
-|username|string|null:false|
+|groupname|string|null:false|
 
 ## Association
 - has_many :users ,through: :group_users
