@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'erb2haml'
 #アイコン用
   gem 'font-awesome-rails'
+#ログイン用
+  gem 'devise'
