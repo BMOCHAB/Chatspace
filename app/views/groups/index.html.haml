@@ -1,68 +1,68 @@
 .notification
 .wrapper
-	.side-bar
-		.side-bar__header
-			%h3.side-bar__header__name
-				BB
-			%ul.side-bar__header__lists
-				%li.side-bar__header__lists__list
-					%i.fa.fa-pencil-square-o.icon
-				%li.side-bar__header__lists__list
-					%i.fa.fa-cog.icon
-					
-		.side-bar__groups
-			.side-bar__groups__group
-				%a{href:'#', class:'side-bar__groups__group__link'}
-					.side-bar__groups__group__link__name
-						Sample
-					.side-bar__groups__group__link__message
-						Sample
-			.side-bar__groups__group
-				%a{href:'#', class:'side-bar__groups__group__link'}
-					.side-bar__groups__group__link__name
-						Sample
-					.side-bar__groups__group__link__message
-						Sample
+  .side-bar
+    .side-bar__header
+      %h3.side-bar__header__name
+        BB
+      %ul.side-bar__header__lists
+        %li.side-bar__header__lists__list
+          %i.fa.fa-pencil-square-o.icon
+        %li.side-bar__header__lists__list
+          %i.fa.fa-cog.icon
+          
+    .side-bar__groups
+      .side-bar__groups__group
+        %a{href:'#', class:'side-bar__groups__group__link'}
+          .side-bar__groups__group__link__name
+            Sample
+          .side-bar__groups__group__link__message
+            Sample
+      .side-bar__groups__group
+        %a{href:'#', class:'side-bar__groups__group__link'}
+          .side-bar__groups__group__link__name
+            Sample
+          .side-bar__groups__group__link__message
+            Sample
 
-	.chat
-		.chat__header
-			.chat__header__left-header
-				.chat__header__left-header__leftheader-title
-					sample group
-				%ul.chat__header__left-header__members
-					%li.chat__header__left-header__members__member
-						Member:sample
-			.chat__header__right-header
-				%a{ class:'chat__header__right-header__button', href:'#'}Edit
+  .chat
+    .chat__header
+      .chat__header__left-header
+        .chat__header__left-header__leftheader-title
+          sample group
+        %ul.chat__header__left-header__members
+          %li.chat__header__left-header__members__member
+            Member:sample
+      .chat__header__right-header
+        %a{ class:'chat__header__right-header__button', href:'#'}Edit
 
 
-		.chat__messages.chat__js-messages
-			.chat__messages.chat__js-messages__message
-				.message__upper-message
-					%p.message__upper-message__user-name
-						BB
-					%p.message__upper-message__date
-						2018/01/07 12:38
-				.message__lower-message
-					%p.message__lower-message__content
-						シェフの気まぐれ天気予報〜〜〜〜！！！！！
-			.chat__messages.chat__js-messages__message
-				.message__upper-message
-					%p.message__upper-message__user-name
-						BB
-					%p.message__upper-message__date
-						2018/01/07 23:44
-				.message__lower-message
-					%p.message__lower-message__content
-						晴れ〜〜〜〜〜〜〜〜〜〜〜〜〜！！！！！！！！！！！！！
+    .chat__messages.chat__js-messages
+      .chat__messages.chat__js-messages__message
+        .message__upper-message
+          %p.message__upper-message__user-name
+            BB
+          %p.message__upper-message__date
+            2018/01/07 12:38
+        .message__lower-message
+          %p.message__lower-message__content
+            シェフの気まぐれ天気予報〜〜〜〜！！！！！
+      .chat__messages.chat__js-messages__message
+        .message__upper-message
+          %p.message__upper-message__user-name
+            BB
+          %p.message__upper-message__date
+            2018/01/07 23:44
+        .message__lower-message
+          %p.message__lower-message__content
+            晴れ〜〜〜〜〜〜〜〜〜〜〜〜〜！！！！！！！！！！！！！
 
-		.chat__form
-			%form{ class:'js-form', id:'new_message', action:'/groups/messages', method: :post}
-				%input{ type:'hidden' }
-				%input{ type:'hidden', name:'authenticity_token'}
-				%input{ class:'form_message js-content', placeholder:'type a message', type:'text', name:'message[content]', id:'message-content' }
-				.form__mask
-					%label{ class:'form__mask__image', for:'message_image'}
-						%i.fa.fa-picture-o.icon
-							%input{ class:'js-file', type:'file', name:'messaage[image]', id:'message_image'}
-			%input{ type:'submit', name:'commit', value:'send', id:'form__submit' }
+    .chat__form
+      %form{ class:'js-form', id:'new_message', action:'/groups/messages', method: :post}
+        %input{ type:'hidden' }
+        %input{ type:'hidden', name:'authenticity_token'}
+        %input{ class:'form_message js-content', placeholder:'type a message', type:'text', name:'message[content]', id:'message-content' }
+        .form__mask
+          %label{ class:'form__mask__image', for:'message_image'}
+            %i.fa.fa-picture-o.icon
+              %input{ class:'js-file', type:'file', name:'messaage[image]', id:'message_image'}
+      %input{ type:'submit', name:'commit', value:'send', id:'form__submit' }
