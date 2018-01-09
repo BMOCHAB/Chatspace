@@ -1,17 +1,19 @@
+$height:100%;
+
 .wrapper {
-  height: 100%;
+  height: $height;
   min-width: 100%;
   .side-bar {
-    height: 100%;
+    height: $height;
     width: 300px;
     float: left;
     background-color: #2f3e51;
-    .side-bar__header {
+    &__header {
       background-color: #253141;
       width: 260px;
       height: 60px;
       padding: 20px;
-      .side-bar__header__name {
+      &__name {
         font-size: 16px;
         font-weight: bold;
         float: left;
@@ -31,17 +33,17 @@
     .side-bar__groups {
       height: calc(100vh - 100px);
       padding: 0 20px;
-      .side-bar__groups__group {
+      &__group {
         padding-top: 20px;
         padding-bottom: 40px;
           a{
             text-decoration: none;
             color: #fff;
           }
-          .side-bar__groups__group__link__name {
+          &__link__name {
             font-size: 15px;
           }
-          .side-bar__groups__group__link__message {
+          &__link__message {
             font-size: 11px;
             margin-top: 5px;
           }
@@ -56,14 +58,14 @@
   .chat{
     width: calc(100% - 300px);
     float: left;
-    .chat__header {
+    &__header {
       height: 100px;
       border-bottom: solid 1px #eeeeee;
       padding: 0 40px;
-      .chat__header__left-header {
+      &__left-header {
         padding-top: 35px;
         float: left;
-        .chat__header__left-header__leftheader-title {
+        &__leftheader-title {
           font-size: 20px;
           color: #333;
           margin-bottom: 15px;
@@ -96,7 +98,7 @@
       padding-top: 6px;
       background-color: #fcfcfc;
       height: calc(100vh - 197px);
-        .chat__messages.chat__js-messages__message {
+        &__message {
           padding-top: 40px;
         }
           .message__upper-message {
@@ -127,7 +129,7 @@
       width: auto;
       display: flex;
         form#new_message {
-          width: 70%;
+          width: 85%;
           display: flex;
           input#message-content {
             width: 100%;
