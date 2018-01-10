@@ -21,13 +21,15 @@ $height:100%;
         line-height: 60px;
       }
       ul.side-bar__header__lists {
-        color: #ffffff;
         line-height: 60px;
         display: flex;
         float: right;
       }
         li {
           margin-left: 5px;
+            i {
+              color: #fff;
+            }
         }
     }
     .side-bar__groups {
