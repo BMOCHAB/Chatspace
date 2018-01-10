@@ -8,8 +8,10 @@
         %li.side-bar__header__lists__list
           %i.fa.fa-pencil-square-o.icon
         %li.side-bar__header__lists__list
-          %i.fa.fa-cog.icon
-          
+          %i
+            = link_to edit_user_path do
+              = fa_icon 'cog', class: 'icon'
+
     .side-bar__groups
       .side-bar__groups__group
         %a{href:'#', class:'side-bar__groups__group__link'}
