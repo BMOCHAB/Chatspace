@@ -3,7 +3,7 @@
   .side-bar
     .side-bar__header
       %h3.side-bar__header__name
-        BB
+        = current_user.name
       %ul.side-bar__header__lists
         %li.side-bar__header__lists__list
           %i.fa.fa-pencil-square-o.icon
@@ -42,7 +42,7 @@
       .chat__messages.chat__js-messages__message
         .message__upper-message
           %p.message__upper-message__user-name
-            BB
+            Sample
           %p.message__upper-message__date
             2018/01/07 12:38
         .message__lower-message
@@ -51,7 +51,7 @@
       .chat__messages.chat__js-messages__message
         .message__upper-message
           %p.message__upper-message__user-name
-            BB
+            Sample
           %p.message__upper-message__date
             2018/01/07 23:44
         .message__lower-message
