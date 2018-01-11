@@ -6,7 +6,9 @@
         = current_user.name
       %ul.side-bar__header__lists
         %li.side-bar__header__lists__list
-          %i.fa.fa-pencil-square-o.icon
+          %i
+            = link_to new_group_path do
+              = fa_icon 'pencil-square-o', class: 'icon'
         %li.side-bar__header__lists__list
           %i
             =link_to edit_user_path :id, class: "icon" do
