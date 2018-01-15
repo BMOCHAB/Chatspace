@@ -1,0 +1,17 @@
+.notification
+.wrapper
+  .side-bar
+    = render partial: 'groups/side'
+  .chat
+    = render partial: 'chat_header'
+    .chat__messages.chat__js-messages
+      .chat__messages.chat__js-messages__message
+        = render partial: 'message', collection: @messages
+    .chat__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
