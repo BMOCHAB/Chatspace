@@ -1,3 +1,173 @@
+$height:100%;
+
+.wrapper {
+  height: $height;
+  min-width: 100%;
+  .side-bar {
+    height: $height;
+    width: 300px;
+    float: left;
+    background-color: #2f3e51;
+    &__header {
+      background-color: #253141;
+      width: 260px;
+      height: 60px;
+      padding: 20px;
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+        color: #ffffff;
+        line-height: 60px;
+      }
+      ul.side-bar__header__lists {
+        color: #ffffff;
+        line-height: 60px;
+        display: flex;
+        float: right;
+      }
+        li {
+          margin-left: 5px;
+        }
+    }
+    .side-bar__groups {
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      &__group {
+        padding-top: 10px;
+        padding-bottom: 40px;
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
+          &__link__name {
+            font-size: 15px;
+            margin-top: 20px;
+          }
+          &__link__message {
+            font-size: 11px;
+            margin-top: 5px;
+            margin-bottom: 45px;
+          }
+      }
+    }
+  }
+
+  .chat{
+    width: calc(100% - 300px);
+    float: left;
+    &__header {
+      height: 100px;
+      border-bottom: solid 1px #eeeeee;
+      padding: 0 40px;
+      &__left-header {
+        padding-top: 35px;
+        float: left;
+        &__leftheader-title {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+        ul.chat__header__left-header__members {
+          list-style: none;
+          color: #999;
+        }
+          li.chat__header__left-header__members__member {
+            font-size: 12px;
+          }
+      }
+        .chat__header__right-header {
+          float: right;
+          line-height: 40px;
+          margin-top: 28px;
+          padding: 0 20px;
+          border: 1px solid #38AEF0;
+          &__button {
+            text-decoration: none;
+            color: #38AEF0;
+            font-size: 14px;
+          }
+        }
+    }
+
+    .chat__messages.chat__js-messages {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 6px;
+      background-color: #fcfcfc;
+      height: calc(100vh - 197px);
+        .message {
+          padding-top: 40px;
+          .upper-message {
+            display: flex;
+            .message__upper-message__user-name {
+              margin-right: 10px;
+              font-size: 16px;
+              font-weight: bold;
+              color: #434A54;
+            }
+            .message__upper-message__date {
+              font-size: 12px;
+              color: #999;
+            }
+          }
+        }
+          .lower-meesage {
+            p.lower-message__content {
+              margin-top: 10px;
+              font-size: 14px;
+              color: #434A54;
+            }
+          }
+    }
+    .chat__form {
+      height: 50px;
+      padding: 20px 40px;
+      background-color: #ddd;
+      width: auto;
+      display: flex;
+        form#new_message {
+          width: 85%;
+          display: flex;
+          input#message-content {
+            width: 100%;
+            height: 50px;
+            padding: 15px 10px;
+            line-height: 20px;
+            border: none;
+            resize: none;
+            box-sizing: border-box;
+          }
+          .form__mask {
+            label.form__mask__image {
+              i.fa.fa-picture-o.icon {
+                color: #000;
+                background-color: #fff;
+                line-height: 50px;
+                font-size: 20px;
+                padding-right: 10px;
+                input#message_image {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      input#form__submit {
+        height: 50px;
+        width: 120px;
+        margin-left: 15px;
+        color: #ffffff;
+        background-color: #38AEF0;
+        border: none;
+        float: right;
+      }
+    }
+  }
+}
+
+
+
 .chat-group-form {
   width: 980px;
   margin: 60px auto;
