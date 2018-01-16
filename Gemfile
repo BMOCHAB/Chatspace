@@ -64,4 +64,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'pry-rails'
+group :development, :test do
+  #テスト環境で使用
+  gem 'byebug', platform: :mri
+  #デバッグ用
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  #RSpecを利用するため
+  gem 'rails-controller-testing'
+  #コントローラのテストに必要
+  gem "factory_girl_rails", "~> 4.0"
+  #ダミーのインスタンスを作成することができる
+  gem 'faker'
+  #ダミーデータを作成するため
+end
