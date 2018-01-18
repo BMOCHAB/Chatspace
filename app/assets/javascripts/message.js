@@ -1,8 +1,5 @@
-
-
 $(function(){ 
   function new_messageformat(data){
-   var src = data.image_url;
    var html = $(  '<div class="message">' +
                   '<div class="upper-message">'+
                   '<div class="message__upper-message__user-name">'+data.name+
@@ -12,13 +9,13 @@ $(function(){
                   '</div>'+
                   '<div class="lower-message">'+
                   '<p class="lower-message__content">'+data.text+'</p>'+
-                  '<img class="image" src="%{src}">'+
                   '</div>'+
                   '</div>'+
                   '</div>'
                 );
+  
     return html;
-    };
+  }
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
