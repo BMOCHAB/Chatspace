@@ -1,7 +1,7 @@
 $height:100%;
 
 .wrapper {
-  height: $height;
+  height: 703px;
   min-width: 100%;
   .side-bar {
     height: $height;
@@ -95,7 +95,8 @@ $height:100%;
       padding-right: 40px;
       padding-top: 6px;
       background-color: #fcfcfc;
-      height: calc(100vh - 197px);
+      height: 506px;
+      overflow: scroll;
         .message {
           padding-top: 40px;
           .upper-message {
