@@ -5,14 +5,15 @@ $(function(){
    var src = data.image_url;
    var html = $(  '<div class="message">' +
                   '<div class="upper-message">'+
-                  '<div class="user-name">'+data.name+
+                  '<div class="message__upper-message__user-name">'+data.name+
                   '</div>'+
-                  '<div class="date">'+data.created_at+
+                  '<div class="message__upper-message__date">'+data.created_at+
                   '</div>'+
                   '</div>'+
                   '<div class="lower-message">'+
-                  '<p class="content">'+data.text+'</p>'+
+                  '<p class="lower-message__content">'+data.text+'</p>'+
                   '<img class="image" src="%{src}">'+
+                  '</div>'+
                   '</div>'+
                   '</div>'
                 );
@@ -32,7 +33,7 @@ $(function(){
     })
     .done(function(data){ 
     var html = new_messageformat(data);
-    $('.chat__messages').append(html);
+    $('.chat__messages.chat__js-messages').append(html);
     $('.form__message').val('');
     $('.form__submit').prop('disabled', false);
     })
