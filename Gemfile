@@ -73,7 +73,7 @@ group :development, :test do
   #RSpecを利用するため
   gem 'rails-controller-testing'
   #コントローラのテストに必要
-  gem "factory_girl_rails", "~> 4.0"
+  gem "factory_bot_rails", "~> 4.0"
   #ダミーのインスタンスを作成することができる
   gem 'faker'
   #ダミーデータを作成するため
