@@ -1,23 +1,23 @@
 
-$(function(){
+
+$(function(){ 
   function new_messageformat(data){
-   var src = data.image
-   var html = $(  '<div class="message">'
-                  '<div class="upper-message">'
-                  '<div class="user-name">'+data.user.name+
-                  '</div>'
+   var src = data.image_url;
+   var html = $(  '<div class="message">' +
+                  '<div class="upper-message">'+
+                  '<div class="user-name">'+data.name+
+                  '</div>'+
                   '<div class="date">'+data.created_at+
-                  '</div>'
-                  '</div>'
-                  '<div class="lower-message">'
-                  '<p class="content">'+data.content+'</p>'
-                  '<img class="image" src="%{src}">'
-                  '</div>'
+                  '</div>'+
+                  '</div>'+
+                  '<div class="lower-message">'+
+                  '<p class="content">'+data.text+'</p>'+
+                  '<img class="image" src="%{src}">'+
+                  '</div>'+
                   '</div>'
                 );
-   
-   return new_messageformat;
-  }
+    return html;
+    };
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -30,15 +30,14 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-  var html = new_messageformat(data);
-  $('chat__messages').append(html);
-  $('form__message').val('');
-  $('.form__submit').prop('disabled', false);
-  $("html,body").animate({scrollTop:$('message').offset().top});
+    .done(function(data){ 
+    var html = new_messageformat(data);
+    $('.chat__messages').append(html);
+    $('.form__message').val('');
+    $('.form__submit').prop('disabled', false);
     })
-  .fail(function(message){
-  console.log('error!');
-    })
-    })
+    .fail(function(message){
+      console.log('error!');
+    });
   });
+});
